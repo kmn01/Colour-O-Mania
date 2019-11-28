@@ -7,22 +7,10 @@ CRGB LED_PIN[NUM_LEDS];
 for(int i=0;i<4;i++)
     LED_PIN[i]=i+1;
 
-struct Lights:
-{
-    int red;
-    int green;
-    int blue;
-
-}led[12];r
-
+CRGB led[NUM_LEDS];
 CapacitiveSensor cs[12];
 
-for(int i=0,pin=22;i<12;i++,pin+=3)
-{
-    led[i].red=pin;
-    led[i].green=pin+1;
-    led[i].blue=pin+2;
-}
+
 
 int j;
 
@@ -34,13 +22,10 @@ for(i=0,j=2;i<12;i+=1,j+=1)
 void setup()
 {
     for(int i=0;i<12;i+=1)
-    {
         cs[i].set_CS_AutocaL_Millis(0xFFFFFFFF);
-        pinMode(led[i].red,OUTPUT);
-        pinMode(led[i].green,OUTPUT);
-        pinMode(led[i].blue,OUTPUT);
-        Serial.begin(9600);
-    }
+    FastLED.addLeds<WS2812, LED_PIN, GRB>(leds, NUM_LEDS);
+    Serial.begin(9600);
+    
  }
  int capPressed(long total)
  {
