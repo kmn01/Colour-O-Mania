@@ -1,4 +1,11 @@
 #include<CapacitiveSensor.h>
+#include<FastLED.h>
+
+#define NUM_LEDS=224;
+CRGB LED_PIN[NUM_LEDS];
+
+for(int i=0;i<4;i++)
+    LED_PIN[i]=i+1;
 
 struct Lights:
 {
@@ -6,9 +13,9 @@ struct Lights:
     int green;
     int blue;
 
-}led[12];
+}led[12];r
 
-CapacitveSensor cs[12];
+CapacitiveSensor cs[12];
 
 for(int i=0,pin=22;i<12;i++,pin+=3)
 {
