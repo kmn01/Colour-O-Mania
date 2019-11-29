@@ -152,6 +152,106 @@ void colourChange(int p, int ans)
                 }
         case 4: if(ans==1)
                 {
+                   led[38]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=39;i<=56;i++)
+                   {
+                      led[i]=CRGB(0,255,0);
+                      FastLED.show();
+                   }
+                }
+                else if(ans==0)
+                {
+                   led[38]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=39;i<=56;i++)
+                   {
+                      led[i]=CRGB(255,0,0);
+                      FastLED.show();
+                   }
+                }
+                else
+                {
+                   led[38]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=39;i<=56;i++)
+                   {
+                      led[i]=CRGB(255,255,0);
+                      FastLED.show();
+                   }
+                }
+                break;   
+        case 5: if(ans==1)
+                {
+                   led[57]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=58;i<=75;i++)
+                   {
+                      led[i]=CRGB(0,255,0);
+                      FastLED.show();
+                   }
+                }
+                else if(ans==0)
+                {
+                   led[57]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=58;i<=75;i++)
+                   {
+                      led[i]=CRGB(255,0,0);
+                      FastLED.show();
+                   }
+                }
+                else
+                {
+                   led[57]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=58;i<=75;i++)
+                   {
+                      led[i]=CRGB(255,255,0);
+                      FastLED.show();
+                   }
+                }   
+    }
+  }
+  
+  else if(6<=p && p<=9)
+  {
+    FastLED.addLeds<WS2812, LED_PIN[2], GRB>(leds, NUM_LEDS);
+      switch(p)
+    {
+      case 6: if(ans==1)
+              {
+                 led[0]=CRGB(0,0,0);
+                 FastLED.show();
+                 for(int i=1;i<=18;i++)
+                 {
+                    led[i]=CRGB(0,255,0);
+                    FastLED.show();
+                 }
+              }
+              else if(ans==0)
+              {
+                 led[0]=CRGB(0,0,0);
+                 FastLED.show();
+                 for(int i=1;i<=18;i++)
+                 {
+                    led[i]=CRGB(255,0,0);
+                    FastLED.show();
+                 }
+              }
+              else
+              {
+                 led[0]=CRGB(0,0,0);
+                 FastLED.show();
+                 for(int i=1;i<=18;i++)
+                 {
+                    led[i]=CRGB(255,255,0);
+                    FastLED.show();
+                 }
+              }
+              break;
+        case 7: if(ans==1)
+                {
                    led[19]=CRGB(0,0,0);
                    FastLED.show();
                    for(int i=20;i<=37;i++)
@@ -180,13 +280,134 @@ void colourChange(int p, int ans)
                       FastLED.show();
                    }
                 }
-        case 5:        
-  else if(6<=p && p<=9)
-    FastLED.addLeds<WS2812, LED_PIN[2], GRB>(leds, NUM_LEDS);
-  
+        case 8: if(ans==1)
+                {
+                   led[38]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=39;i<=56;i++)
+                   {
+                      led[i]=CRGB(0,255,0);
+                      FastLED.show();
+                   }
+                }
+                else if(ans==0)
+                {
+                   led[38]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=39;i<=56;i++)
+                   {
+                      led[i]=CRGB(255,0,0);
+                      FastLED.show();
+                   }
+                }
+                else
+                {
+                   led[38]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=39;i<=56;i++)
+                   {
+                      led[i]=CRGB(255,255,0);
+                      FastLED.show();
+                   }
+                }
+                break;   
+        case 9: if(ans==1)
+                {
+                   led[57]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=58;i<=75;i++)
+                   {
+                      led[i]=CRGB(0,255,0);
+                      FastLED.show();
+                   }
+                }
+                else if(ans==0)
+                {
+                   led[57]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=58;i<=75;i++)
+                   {
+                      led[i]=CRGB(255,0,0);
+                      FastLED.show();
+                   }
+                }
+                else
+                {
+                   led[57]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=58;i<=75;i++)
+                   {
+                      led[i]=CRGB(255,255,0);
+                      FastLED.show();
+                   }
+                }         
   else
+  {
     FastLED.addLeds<WS2812, LED_PIN[3], GRB>(leds, NUM_LEDS);
+    case 10:   if(ans==1)
+              {
+                 led[0]=CRGB(0,0,0);
+                 FastLED.show();
+                 for(int i=1;i<=18;i++)
+                 {
+                    led[i]=CRGB(0,255,0);
+                    FastLED.show();
+                 }
+              }
+              else if(ans==0)
+              {
+                 led[0]=CRGB(0,0,0);
+                 FastLED.show();
+                 for(int i=1;i<=18;i++)
+                 {
+                    led[i]=CRGB(255,0,0);
+                    FastLED.show();
+                 }
+              }
+              else
+              {
+                 led[0]=CRGB(0,0,0);
+                 FastLED.show();
+                 for(int i=1;i<=18;i++)
+                 {
+                    led[i]=CRGB(255,255,0);
+                    FastLED.show();
+                 }
+              }
+              break;
+    case 11:   if(ans==1)
+                {
+                   led[19]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=20;i<=37;i++)
+                   {
+                      led[i]=CRGB(0,255,0);
+                      FastLED.show();
+                   }
+                }
+                else if(ans==0)
+                {
+                   led[19]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=20;i<=37;i++)
+                   {
+                      led[i]=CRGB(255,0,0);
+                      FastLED.show();
+                   }
+                }
+                else
+                {
+                   led[19]=CRGB(0,0,0);
+                   FastLED.show();
+                   for(int i=20;i<=37;i++)
+                   {
+                      led[i]=CRGB(255,255,0);
+                      FastLED.show();
+                   }
+                }
+  }
     
+        
   
 
 void setup()
