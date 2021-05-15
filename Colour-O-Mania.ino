@@ -407,15 +407,23 @@ void colourChange(int p, int ans)
                 }
   }
     
-        
-  
-
+void spawn(int ch)
+{
+  randomize();
+  FastLED.addLeds<WS2812, LED_PIN[random(4)], GRB>(leds, NUM_LEDS);
+  int new_ch=random{1,20,39,58};
+  if(new_ch!=ch)
+    return new_ch;
+  else
+    spawn(new_ch);
+}
 void setup()
 {
     for(int i=0;i<12;i+=1)
         cs[i].set_CS_AutocaL_Millis(0xFFFFFFFF);
     Serial.begin(9600);
 }
+int p=0;
 void loop()
 {
   long start=millis();
@@ -425,7 +433,6 @@ void loop()
     total[i]=cs[i].capacitiveSensor(30);
   }
   Serial.print(millis()-start);
-  int p=0;
   for(i=0;i<12;i++)
   {
     if(total[i]>=threshold)
@@ -437,5 +444,12 @@ void loop()
   if(p==target)
   {
     changeColour(p,1);
-    
-  
+    p=spawn(p);
+    changeColour(p,2);
+  }
+  else
+  {
+    changeColour(p,0);
+    exit();
+  }
+}
