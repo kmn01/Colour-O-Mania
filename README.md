@@ -1,1 +1,1 @@
-# Major-Project
+# Colour-O-Mania
